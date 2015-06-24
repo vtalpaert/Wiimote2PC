@@ -1,28 +1,3 @@
-#############################
-
-# Unfinished
-# This code is a fail. It does work as the original code but is not an improvement (maybe in speed, but that is not the issue). Indeed pressing UP and LEFT will be easy to detect (sum of values), but if an additional button is pressed this does not work anymore.
-# I could try to predict the results between two values by inspecting the different possibilities, only they are millions of combinations minus the permutations, etc... sum of Newton's binomes ^^
-
-
-# Solution: more if statements in the original code...
-
-
-#############################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # This program utilises the cwiid Python library in order to get input over bluetooth from a wiimote.
 # Coded by The Raspberry Pi Guy. Work based on some of Matt Hawkins's!
 
