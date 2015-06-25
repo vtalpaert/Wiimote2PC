@@ -4,7 +4,7 @@
 # Modified by Victor Talpaert, June 2015.
 # The aim is to react to some buttons combinations
 
-import cwiid, time, decompose
+import cwiid, time, extra
 
 
 button_delay = 0.1
@@ -50,7 +50,9 @@ while True:
     		wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
     		check = 0
     		while check == 0:
-      			print(str(wii.state['acc'][0]) + ' ' + str(wii.state['acc'][1]) + ' ' + str(wii.state['acc'][2]) + '; ...')
+			rawacc = wii.state['acc']
+			cleanacc = extra.coeffcalc(rawacc)
+      			print(cleanacc)
       			time.sleep(0.01)
       			check = (buttons & cwiid.BTN_HOME)
     		time.sleep(button_delay)

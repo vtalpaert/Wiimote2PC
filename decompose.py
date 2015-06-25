@@ -3,7 +3,7 @@
 
 # function to decompose a number in a sum of power of 2
 # input is number in base 10
-# output array of the powers
+# output list of the powers
 
 def powers_of_2(x):
 	s = str(bin(x)[2:]) # binary value of x
