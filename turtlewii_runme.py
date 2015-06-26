@@ -4,7 +4,7 @@
 # Modified by Victor Talpaert, June 2015.
 # The aim is to react to some buttons combinations
 
-import cwiid, time, extra, turtlewii
+import cwiid, time, extra, turtlewii_func
 
 
 button_delay = 0.1
@@ -53,7 +53,7 @@ while True:
 			cleanacc = extra.coeffcalc(wii.state['acc'])
       			# print(cleanacc)
 			if (cleanacc != (0, 0)):
-				turtlewii.move(cleanacc)
+				turtlewii_func.move(cleanacc)
       			time.sleep(0.01)
       			check = (buttons & cwiid.BTN_HOME)
     		time.sleep(button_delay)
