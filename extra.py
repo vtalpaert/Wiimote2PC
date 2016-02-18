@@ -37,11 +37,23 @@ def powers_of_2(x):
 	for i in range(l):
 		if (s[l-1-i] == '1'):
 			result.append(i)
-
     	return result
 
+
+
+# functions for buttons interpretation
 def increase(speed, factor):
 	return min(100, speed + factor)
 
 def decrease(speed, factor):
 	return max(50, speed - factor) # watch out for the 50 instead of 0, on purpose
+
+
+
+
+
+	
+
+
+
+

@@ -8,12 +8,12 @@ distance = 30
 sensibility = 0.1
 
 
-# init
-turtle.reset()
-turtle.left(90)
-turtle.pensize(5)
-turtle.shape("turtle")
-turtle.resizemode("auto")
+def init():
+	turtle.reset()
+	turtle.left(90)
+	turtle.pensize(5)
+	turtle.shape("turtle")
+	turtle.resizemode("auto")
 
 def move(cleanacc):
 	# cleanacc is (x, z)

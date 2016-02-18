@@ -4,10 +4,13 @@
 # Modified by Victor Talpaert, June 2015.
 # The aim is to react to some buttons combinations
 
-import cwiid, time, extra, controller
+import cwiid, time, extra, turtlewii_func, controller
 
-oldcleanacc = (50,50)
+# define here what you want to do with the data
+
+# turtlewii_func.init()
 def send(cleanacc):
+	# turtlewii_func.move(cleanacc)
 	controller.send_cleanacc(cleanacc)
 
 
@@ -112,8 +115,11 @@ while True:
 	else: # no arrow
 		newcleanacc = (50, 50)
 	
-	cleanacc = newcleanacc
-	send(cleanacc)
+	if (newcleanacc != cleanacc):
+		cleanacc = newcleanacc
+		send(cleanacc)
+	#cleanacc = newcleanacc
+	#send(cleanacc)
 
   	if (A in powers):
     		# print 'A'
